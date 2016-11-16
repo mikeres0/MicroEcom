@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
-    <title>{% block title %}{% trans "Dashboard - Saleor" %}{% endblock %}</title>
+    <title>{% block title %}{% trans "Dashboard" %}{% endblock %}</title>
 
     {% render_bundle 'vendor' 'css' %}
     {% render_bundle 'dashboard' 'css' %}
@@ -36,7 +36,7 @@
             <ul class="side-nav fixed" id="side-menu">
                 <li class="brand-logo">
                     <a href="{% url 'dashboard:index' %}">
-                        <img src="{% static "img/dashboard-logo.svg" %}" alt="Saleor">
+                        <img src="{% static "img/logo.png" %}" alt="Saleor">
                     </a>
                 </li>
                 <li class="side-nav-user">
