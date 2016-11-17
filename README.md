@@ -1,7 +1,7 @@
 MicroEcom
 ======
 
-[![Build Status](https://circleci.com/gh/mikeres0/saleor.png?circle-token=circle-token)](https://circleci.com/gh/mikeres0/saleor)
+[![Build Status](https://circleci.com/gh/mikeres0/microecom.png?circle-token=circle-token)](https://circleci.com/gh/mikeres0/microecom)
 
 The MicroEcom platform, in active development.
 
