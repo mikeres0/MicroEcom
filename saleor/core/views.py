@@ -9,4 +9,4 @@ def home(request):
                                          'variants__stock')
     return TemplateResponse(
         request, 'base.html',
-        {'products': products, 'parent': None})
+        {'products': products, 'parent': None, 'isHome': true})

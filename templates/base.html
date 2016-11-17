@@ -10,7 +10,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="{% block meta_description %}{% endblock %}">
-        <meta name="author" content="{% trans "Mirumee Software" %}">
+        <meta name="author" content="{% trans "MicroEcom" %}">
         {% endblock meta %}
 
         {% render_bundle 'vendor' 'css' %}
@@ -26,7 +26,7 @@
 
     <body itemscope itemtype="http://schema.org/WebPage">
         {% block header %}
-            <header class="navbar navbar-default navbar-inverse navbar-static-top" role="navigation">
+            <header class="navbar navbar-default navbar-static-top" role="navigation">
                 <nav class="container">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -35,7 +35,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="/">MicroEcom</a>
+                        <a class="navbar-brand" href="/">MicroEcom's Gift Shop</a>
                     </div>
                     <div class="collapse navbar-collapse navbar-ex1-collapse">
                         <ul class="nav navbar-nav">
@@ -95,6 +95,9 @@
                 {% endblock breadcrumb %}
             </ul>
             {% endblock outerbreadcrumb %}
+            {% if isHome == true %}
+                <h1>True</h1>h1>
+            {% endif %}
             {% block outercontent %}
             <div class="row">
                 <div class="col-sm-12">
@@ -111,7 +114,7 @@
             <footer>
                 <div class="container">
                     <p class="pull-right">
-                        &copy; MicroEcom - Powered by <a href="http://getsaleor.com/" target="_blank">Saleor</a>
+                        &copy; MicroEcom - A Platform Derived from <a href="http://getsaleor.com/" target="_blank">Saleor</a>
                     </p>
                 </div>
             </footer>
