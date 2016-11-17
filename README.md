@@ -1,7 +1,7 @@
 Saleor
 ======
 
-[![Build Status](https://circleci.com/gh/mikeres0/saleor.png?circle-token=circle-token)](https://circleci.com/gh/mikeres0/saleor.png?circle-token=circle-token)
+[![Build Status](https://circleci.com/gh/mikeres0/saleor.png?circle-token=circle-token)](https://circleci.com/gh/mikeres0/saleor)
 
 Avast ye landlubbers! Saleor be a Satchless store ye can fork.
 
