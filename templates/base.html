@@ -96,7 +96,7 @@
             </ul>
             {% endblock outerbreadcrumb %}
             {% if isHome == "true" %}
-                <h1>Landing page here</h1>
+                {% include "landingpage/landing.html" %}
             {% else %}
                 {% block outercontent %}
                 <div class="row">
