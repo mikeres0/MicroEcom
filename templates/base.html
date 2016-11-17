@@ -18,6 +18,8 @@
 
         {% block stylesheet %}{% endblock stylesheet %}
 
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
         <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
         <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -85,19 +87,19 @@
             {% endfor %}
         </div>
         {% endif %}
-        <div class="container">
-            {% block outerbreadcrumb %}
-            <ul class="breadcrumb" itemprop="breadcrumb">
-                {% block breadcrumb %}
-                <li>
-                    <a href="/">{% trans "Home" %}</a>
-                </li>
-                {% endblock breadcrumb %}
-            </ul>
-            {% endblock outerbreadcrumb %}
-            {% if isHome == "true" %}
-                {% include "landingpage/landing.html" %}
-            {% else %}
+        {% if isHome == "true" %}
+            {% include "landingpage/landing.html" %}
+        {% else %}
+            <div class="container">
+                {% block outerbreadcrumb %}
+                <ul class="breadcrumb" itemprop="breadcrumb">
+                    {% block breadcrumb %}
+                    <li>
+                        <a href="/">{% trans "Home" %}</a>
+                    </li>
+                    {% endblock breadcrumb %}
+                </ul>
+                {% endblock outerbreadcrumb %}
                 {% block outercontent %}
                 <div class="row">
                     <div class="col-sm-12">
@@ -106,11 +108,11 @@
                                 {% include "category/_items.html" %}
                             </div>
                         {% endblock content %}
-                    </div>
-                </div>
+                        </div>
+                   </div>
                 {% endblock outercontent %}
-            {% endif %}
-        </div>
+            </div>
+        {% endif %}
         {% block footer %}
             <footer>
                 <div class="container">
