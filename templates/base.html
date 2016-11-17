@@ -96,19 +96,20 @@
             </ul>
             {% endblock outerbreadcrumb %}
             {% if isHome == "true" %}
-                <h1>True</h1>
-            {% endif %}
-            {% block outercontent %}
-            <div class="row">
-                <div class="col-sm-12">
-                    {% block content %}
-                        <div class="row">
-                            {% include "category/_items.html" %}
-                        </div>
-                    {% endblock content %}
+                <h1>Landing page here</h1>
+            {% else %}
+                {% block outercontent %}
+                <div class="row">
+                    <div class="col-sm-12">
+                        {% block content %}
+                            <div class="row">
+                                {% include "category/_items.html" %}
+                            </div>
+                        {% endblock content %}
+                    </div>
                 </div>
-            </div>
-            {% endblock outercontent %}
+                {% endblock outercontent %}
+            {% endif %}
         </div>
         {% block footer %}
             <footer>
