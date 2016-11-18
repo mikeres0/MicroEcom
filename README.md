@@ -1,7 +1,7 @@
-MicroEcom
+MicroEcom [![CircleCI](https://circleci.com/gh/mikeres0/MicroEcom.svg?style=svg)](https://circleci.com/gh/mikeres0/MicroEcom)
 ======
 
-[![CircleCI](https://circleci.com/gh/mikeres0/MicroEcom.svg?style=svg)](https://circleci.com/gh/mikeres0/MicroEcom)
+
 
 The MicroEcom platform, in active development.
 
