@@ -3,7 +3,7 @@ MicroEcom [![CircleCI](https://circleci.com/gh/mikeres0/MicroEcom.svg?style=svg)
 
 
 
-The MicroEcom platform, in active development.
+The MicroEcom platform, which is in active development.
 
 
 Usage
