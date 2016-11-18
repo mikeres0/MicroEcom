@@ -250,6 +250,9 @@ PAYMENT_VARIANTS = {
     'paypal': ('payments.paypal.PaypalCardProvider', {
         'client_id': 'mike.resoli-facilitator@gmail.com',
         'secret': 'AZuZEtPFPa9hdCawY-stbYde-PXXuw8FyXg90aUGqfEG574w_gSNkTcUh-hiJRfp2vK77QvdUeGsnjwN'}),
+    'stripe': ('payments.stripe.StripeProvider', {
+        'secret_key': 'sk_test_zSp9aZqXz559ZbLNNgvgsKNQ',
+        'public_key': 'pk_test_Tcho6BnP2CEaywbyen6HODfE'}),
     'default': ('payments.dummy.DummyProvider', {})}
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
