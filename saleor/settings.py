@@ -247,6 +247,9 @@ GOOGLE_CLIENT_SECRET = os.environ.get('GOOGLE_CLIENT_SECRET')
 PAYMENT_MODEL = 'order.Payment'
 
 PAYMENT_VARIANTS = {
+    'paypal': ('payments.paypal.PaypalCardProvider', {
+        'client_id': 'mike.resoli-facilitator@gmail.com',
+        'secret': 'AZuZEtPFPa9hdCawY-stbYde-PXXuw8FyXg90aUGqfEG574w_gSNkTcUh-hiJRfp2vK77QvdUeGsnjwN'}),
     'default': ('payments.dummy.DummyProvider', {})}
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
