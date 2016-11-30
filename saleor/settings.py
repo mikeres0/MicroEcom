@@ -258,6 +258,7 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 CHECKOUT_PAYMENT_CHOICES = [
+    ('default', 'Dummy provider'),
     ('paypal', 'PayPal'),
     ('stripe', 'Stripe')
 ]
