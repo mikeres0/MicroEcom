@@ -20,7 +20,6 @@ ROOT_URLCONF = 'saleor.urls'
 WSGI_APPLICATION = 'saleor.wsgi.application'
 
 ADMINS = (
-    # ('Your Name', 'your_emailexample.com'),
     ('Mike Resoli', 'mike.resoli@gmail.com')
 )
 MANAGERS = ADMINS
@@ -229,7 +228,7 @@ LOGIN_URL = '/account/login'
 DEFAULT_COUNTRY = 'GB'
 DEFAULT_CURRENCY = 'GBP'
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
-DEFAULT_WEIGHT = 'lb'
+DEFAULT_WEIGHT = 'kg'
 
 OPENEXCHANGERATES_API_KEY = os.environ.get('OPENEXCHANGERATES_API_KEY')
 
@@ -249,7 +248,7 @@ PAYMENT_MODEL = 'order.Payment'
 PAYMENT_VARIANTS = {
     'paypal': ('payments.paypal.PaypalCardProvider', {
         'client_id': 'mike.resoli-facilitator@gmail.com',
-        'secret': 'AZuZEtPFPa9hdCawY-stbYde-PXXuw8FyXg90aUGqfEG574w_gSNkTcUh-hiJRfp2vK77QvdUeGsnjwN'}),
+        'secret': 'EDJQDX7uekPn27L_J77gncXcekijnUuIveAMp2rUoJryiNB7N4YjSnlUJUtwLvU5xW7-2OLlYfOMDIHu'}),
     'stripe': ('payments.stripe.StripeProvider', {
         'secret_key': 'sk_test_zSp9aZqXz559ZbLNNgvgsKNQ',
         'public_key': 'pk_test_Tcho6BnP2CEaywbyen6HODfE'}),
@@ -259,7 +258,9 @@ SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'
 SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
 
 CHECKOUT_PAYMENT_CHOICES = [
-    ('default', 'Dummy provider')]
+    ('paypal', 'PayPal'),
+    ('stripe', 'Stripe')
+]
 
 MESSAGE_TAGS = {
     messages.ERROR: 'danger'}
@@ -275,7 +276,7 @@ BOOTSTRAP3 = {
 
 TEST_RUNNER = ''
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split()
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']#os.environ.get('ALLOWED_HOSTS', 'localhost').split()
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
