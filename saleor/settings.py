@@ -89,7 +89,6 @@ context_processors = [
     'django.template.context_processors.request',
     'saleor.core.context_processors.default_currency',
     'saleor.core.context_processors.categories',
-    'saleor.cart.context_processors.cart_counter'
 ]
 
 loaders = [
@@ -303,6 +302,12 @@ VERSATILEIMAGEFIELD_RENDITION_KEY_SETS = {
         ('product_page_big', 'crop__750x750'),
         ('product_page_thumb', 'crop__280x280')]}
 
+VERSATILEIMAGEFIELD_SETTINGS = {
+    # Images should be pre-generated on Production environment
+    'create_images_on_demand': ast.literal_eval(
+        os.environ.get('CREATE_IMAGES_ON_DEMAND', 'True')),
+}
+
 WEBPACK_LOADER = {
     'DEFAULT': {
         'CACHE': not DEBUG,
@@ -317,7 +322,7 @@ WEBPACK_LOADER = {
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 ACCOUNT_USERNAME_REQUIRED = False
 SOCIALACCOUNT_EMAIL_VERIFICATION = False
 ACCOUNT_LOGOUT_ON_GET = True
